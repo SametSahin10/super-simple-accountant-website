@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-payments",
+  "name": "super-simple-accountant-website",
   "private": false,
-  "description": "A Gatsby starter for creating SaaS landing pages using MoonClerk to accept payments.",
+  "description": "Super Simple Accountant Website",
   "version": "0.1.0",
-  "author": "Lee Campbell <lee@moonclerk.com>",
+  "author": "Samet Şahin <a.sahin.ual@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.11",
@@ -48,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/moonclerk/gatsby-starter-payments"
+    "url": "https://github.com/sametsahin10/super-simple-accountant-website"
   },
   "bugs": {
-    "url": "https://github.com/moonclerk/gatsby-starter-payments/issues"
+    "url": "https://github.com/sametsahin10/super-simple-accountant-website/issues"
   }
 }
