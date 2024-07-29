@@ -4,15 +4,15 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { media } from "@utils/media"
 import Button from "@atoms/button"
-import Subheading from "@atoms/subheading"
+import { googlePlayUrl } from "../../constants"
 
 const SectionHeader = () => {
   const data = useStaticQuery(graphql`
     query HeaderImageQuery {
-      file(relativePath: { eq: "checkouts-payments.png" }) {
+      file(relativePath: { eq: "home_page_illustration.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -21,12 +21,23 @@ const SectionHeader = () => {
   return (
     <HeaderContainer contentTop content grid backgroundSecondary>
       <Image>
-        <Img fluid={data.file.childImageSharp.fluid} />
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          style={{ borderRadius: "64px", width: "70%", height: "auto" }}
+        />
       </Image>
       <Content>
-        <Subheading>Get Started</Subheading>
-        <h1>Quickly Accept Payments with Gatsby & MoonClerk</h1>
-        <Button href="#checkout">Checkout</Button>
+        <h1 style={{ color: "black" }}>
+          The most simple accountant - budget planner out there!
+        </h1>
+        <Button
+          style={{ color: "white"}}
+          href={googlePlayUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download now!
+        </Button>
       </Content>
       <HeaderCurve fill="none" viewBox="0 0 1680 232">
         <path

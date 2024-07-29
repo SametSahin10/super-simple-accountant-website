@@ -24,25 +24,25 @@ const SectionSetup = () => {
             <SeperatorOne />
           </Seperator>
           <Number>1</Number>
-          <h3>Clone this repo to your local machine</h3>
+          <h3>Download the app</h3>
         </Step>
         <Step>
           <Seperator>
             <SeperatorTwo />
           </Seperator>
           <Number>2</Number>
-          <h3>Create a Stripe account if you don’t have one.</h3>
+          <h3>Add your income and expenses.</h3>
         </Step>
         <Step>
           <Seperator>
             <SeperatorThree />
           </Seperator>
           <Number>3</Number>
-          <h3>Create a MoonClerk account and set up a form</h3>
+          <h3>View your net balance on home screen</h3>
         </Step>
         <Step>
           <Number>4</Number>
-          <h3>Customize the starter and deploy to Netlify</h3>
+          <h3>Check your entries to see you income - expenses</h3>
         </Step>
       </Setup>
     </Container>

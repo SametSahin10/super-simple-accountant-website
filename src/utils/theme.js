@@ -7,7 +7,7 @@ const theme = {
     shadow: "",
   },
   colors: {
-    primary: "#F2BB63",
+    primary: "#673AB7",
     secondary: "#F9F6F3",
     heading: "#392D40",
     black: "#201C22",

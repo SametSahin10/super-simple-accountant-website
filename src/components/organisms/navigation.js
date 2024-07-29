@@ -5,31 +5,9 @@ import styled from "styled-components"
 import Link from "@atoms/link"
 import { media } from "@utils/media"
 
-const Navigation = ({ siteTitle }) => (
+const Navigation = () => (
   <Nav>
     <Logo />
-    <NavLinks>
-      <li>
-        <NavLink href="https://gatsbyjs.org" alt="">
-          GatsbyJs
-        </NavLink>
-      </li>
-      <li>
-        <NavLink href="https://moonclerk.com" alt="">
-          MoonClerk
-        </NavLink>
-      </li>
-      <li>
-        <NavLink href="https://stripe.com" alt="">
-          Stripe
-        </NavLink>
-      </li>
-      <li>
-        <NavLink href="https://netlify.com" alt="">
-          Netlify
-        </NavLink>
-      </li>
-    </NavLinks>
   </Nav>
 )
 

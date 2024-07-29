@@ -13,34 +13,19 @@ const Footer = () => {
       </LogoContainer>
       <Info>
         <Contact>
-          <a href="800.120.2132">Phone: 800-120-2132</a>
-          <a href="mailto:info@google.com">Email: hi@gatsbystarter.com</a>
-          <a href="https://icons8.com/">Illustrations Open Sourced by Icons8</a>
+          <a href="mailto:supersimpleacc10@google.com">
+            Email: supersimpleacc10@google.com
+          </a>
+          <a href="https://www.freepik.com/search?format=search&last_filter=query&last_value=finance+mobile&query=finance+mobile&type=vector">
+            Illustration by storyset on Freepik
+          </a>
         </Contact>
         <Social>
           <li>
-            <Link href="https://instagram.com">Instagram</Link>
-          </li>
-          <li>
-            <Link href="https://twitter.com">Twitter</Link>
-          </li>
-          <li>
-            <Link href="https://facebook.com">Facebook</Link>
+            <Link href="https://x.com/AccountantApp">Twitter</Link>
           </li>
         </Social>
       </Info>
-
-      <Navigation>
-        <li>
-          <Link href="https://instagram.com">MoonClerk</Link>
-        </li>
-        <li>
-          <Link href="https://twitter.com">Gatsby</Link>
-        </li>
-        <li>
-          <Link href="https://facebook.com">Stripe</Link>
-        </li>
-      </Navigation>
       <LinkTop />
     </FooterContainer>
   )
@@ -58,7 +43,7 @@ const FooterContainer = styled.footer`
   position: relative;
 
   @media ${media.lg} {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr;
   }
 `
 
@@ -90,15 +75,5 @@ const Social = styled.ul`
 
   li {
     margin-bottom: 0.5rem;
-  }
-`
-
-const Navigation = styled.ul`
-  display: flex;
-  list-style: none;
-  margin: 0;
-
-  li {
-    margin-right: 1rem;
   }
 `
