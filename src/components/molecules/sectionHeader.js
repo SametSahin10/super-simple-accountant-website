@@ -87,13 +87,16 @@ const Image = styled.div`
 `
 
 const Content = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-basis: 100%;
   width: 100%;
 
   @media ${media.lg} {
     width: 40%;
     flex-basis: 40%;
+    align-items: flex-start;
   }
 
   h1 {
@@ -107,4 +110,8 @@ const HeaderCurve = styled.svg`
   position: absolute;
   width: 100vw;
   height: auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `

@@ -18,9 +18,8 @@ const Logo = () => {
 
   return (
     <LogoContainer>
-      <Img
+      <StyledImg
         fluid={data.file.childImageSharp.fluid}
-        style={{ borderRadius: "24px", width: "80px", height: "80px" }}
       />
       <LogoText>Super Simple Accountant</LogoText>
     </LogoContainer>
@@ -32,6 +31,27 @@ export default Logo
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
+`
+
+const StyledImg = styled(Img)`
+  border-radius: 24px;
+  min-width: 50px;
+  min-height: 50px;
+
+  @media (min-width: 480px) {
+    min-width: 70px;
+    min-height: 70px;
+  }
+
+  @media (min-width: 600px) {
+    min-width: 80px;
+    min-height: 80px;
+  }
+
+  @media (min-width: 800px) {
+    min-width: 100px;
+    min-height: 100px;
+  }
 `
 
 const LogoText = styled.span`

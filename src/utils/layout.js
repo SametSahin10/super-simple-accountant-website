@@ -14,6 +14,11 @@ import Footer from "@organisms/footer"
 import "./variables.css"
 
 const GlobalStyle = createGlobalStyle`
+@media (min-width: 320px) {
+  html {
+    font-size: 70%; 
+  }
+}
  @media (min-width: 480px) {
   html {
     font-size: 90%; 
