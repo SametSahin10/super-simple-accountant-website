@@ -13,7 +13,7 @@ const SectionSetup = () => {
     <Container content contentTop>
       <Intro>
         <Subheading>Setup</Subheading>
-        <h2>
+        <h2 style={{fontWeight: "normal"}} >
           Get started.
           <br /> In four quick steps.
         </h2>
@@ -24,25 +24,25 @@ const SectionSetup = () => {
             <SeperatorOne />
           </Seperator>
           <Number>1</Number>
-          <h3>Download the app</h3>
+          <StyledStepDescription>Download the app</StyledStepDescription>
         </Step>
         <Step>
           <Seperator>
             <SeperatorTwo />
           </Seperator>
           <Number>2</Number>
-          <h3>Add your income and expenses.</h3>
+          <StyledStepDescription>Add your income and expenses.</StyledStepDescription>
         </Step>
         <Step>
           <Seperator>
             <SeperatorThree />
           </Seperator>
           <Number>3</Number>
-          <h3>View your net balance on home screen</h3>
+          <StyledStepDescription>View your net balance on home screen</StyledStepDescription>
         </Step>
         <Step>
           <Number>4</Number>
-          <h3>Check your entries to see you income - expenses</h3>
+          <StyledStepDescription>Check your entries to see you income - expenses</StyledStepDescription>
         </Step>
       </Setup>
     </Container>
@@ -55,9 +55,15 @@ const Intro = styled.div`
   text-align: center;
 `
 
+const StyledStepDescription = styled.h3`
+  font-weight: 400;
+`
+
 const Setup = styled.div`
   display: grid;
   grid-template-columns: var(--gridQuad);
+
+  font-weight: 400;
 
   @media ${media.lg} {
     padding: 1rem 0;

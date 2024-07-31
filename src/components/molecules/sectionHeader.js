@@ -27,7 +27,7 @@ const SectionHeader = () => {
         />
       </Image>
       <Content>
-        <h1 style={{ color: "black" }}>
+        <h1 style={{ color: "black", fontSize: 48, fontWeight: "normal" }}>
           The most simple accountant - budget planner out there!
         </h1>
         <Button

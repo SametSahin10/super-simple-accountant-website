@@ -8,7 +8,6 @@
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.7",
     "gatsby-image": "^2.11.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-module-resolver": "^1.0.3",
@@ -17,7 +16,6 @@
     "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-styled-components": "^6.13.1",
-    "gatsby-plugin-typography": "^5.13.1",
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
     "prop-types": "^15.8.1",
@@ -25,11 +23,9 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-slick": "^0.30.2",
-    "react-typography": "^0.16.23",
     "slick-carousel": "^1.8.1",
     "source-map": "^0.7.4",
-    "styled-components": "^6.1.12",
-    "typography": "^0.16.24"
+    "styled-components": "^6.1.12"
   },
   "devDependencies": {
     "prettier": "3.3.3"

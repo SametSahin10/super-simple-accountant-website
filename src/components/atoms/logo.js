@@ -57,5 +57,4 @@ const StyledImg = styled(Img)`
 const LogoText = styled.span`
   margin-left: 18px;
   font-size: 1.6rem;
-  font-weight: bold;
 `
