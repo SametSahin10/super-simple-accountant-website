@@ -7,7 +7,13 @@ const Button = styled.a`
   padding: 0.75rem 2rem;
   color: ${props => props.theme.colors.black};
   text-decoration: none;
+  text-align: center;
   transition: ${props => props.theme.animation.transition};
+  min-width: 150px;
+  min-height: 20px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 
   &:hover {
     filter: brightness(105%);

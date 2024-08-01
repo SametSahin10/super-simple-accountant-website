@@ -9,22 +9,36 @@ import { googlePlayUrl } from "../../constants"
 const SectionHeader = () => {
   const data = useStaticQuery(graphql`
     query HeaderImageQuery {
-      file(relativePath: { eq: "home_page_illustration.jpg" }) {
+      mobileAppInUseOne: file(relativePath: { eq: "mobile_app_in_use_one.png" }) {
         childImageSharp {
-          fluid(maxWidth: 800) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
+      mobileAppInUseTwo: file(relativePath: { eq: "mobile_app_in_use_two.png" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+      }
     }
   `)
+
   return (
     <HeaderContainer contentTop content grid backgroundSecondary>
       <Image>
+      <MobileAppInUseImages>
         <Img
-          fluid={data.file.childImageSharp.fluid}
-          style={{ borderRadius: "64px", width: "70%", height: "auto" }}
-        />
+            fluid={data.mobileAppInUseOne.childImageSharp.fluid}
+            style={{ width: "100%", height: "auto", maxWidth: "30%"}}
+          />
+          <Img
+            fluid={data.mobileAppInUseTwo.childImageSharp.fluid}
+            style={{ width: "100%", height: "auto", maxWidth: "35%"}}
+          />
+      </MobileAppInUseImages>
       </Image>
       <Content>
         <h1 style={{ color: "black", fontSize: 48, fontWeight: "normal" }}>
@@ -58,7 +72,7 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   margin-bottom: 4rem;
   padding: 0 var(--spacingContent);
 
@@ -68,10 +82,15 @@ const HeaderContainer = styled.header`
   }
 `
 
+const MobileAppInUseImages = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 const Image = styled.div`
   display: block;
   flex-basis: 100%;
-  padding-top: 12rem;
+  padding-top: 8rem;
   width: 100%;
 
   @media ${media.lg} {
