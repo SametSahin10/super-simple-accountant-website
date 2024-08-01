@@ -6,6 +6,7 @@ import { media } from "@utils/media"
 import Button from "@atoms/button"
 import { googlePlayUrl } from "../../constants"
 
+
 const SectionHeader = () => {
   const data = useStaticQuery(graphql`
     query HeaderImageQuery {
@@ -72,7 +73,7 @@ const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 80vh;
+  height: 100vh;
   margin-bottom: 4rem;
   padding: 0 var(--spacingContent);
 

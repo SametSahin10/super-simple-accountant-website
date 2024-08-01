@@ -7,7 +7,7 @@ import SectionSetup from "@molecules/sectionSetup"
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO />
       <SectionHeader />
       <SectionSetup />
     </Layout>

@@ -7,13 +7,29 @@ import { media } from "@utils/media"
 import SeperatorOne from "@assets/seperators/a-seperator-1.svg"
 import SeperatorTwo from "@assets/seperators/a-seperator-2.svg"
 import SeperatorThree from "@assets/seperators/a-seperator-3.svg"
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
+import PrettyEmailSignUpForm from "@atoms/prettyEmailSignUpForm"
 
 const SectionSetup = () => {
   return (
     <Container content contentTop>
       <Intro>
+        <MailchimpSubscribe
+          url={process.env.MAILCHIMP_SUBCRIBE_EMAIL_URL}
+          render={({ subscribe, status, message }) => (
+            <PrettyEmailSignUpForm
+              status={status}
+              message={message}
+              onValidated={formData => {
+                console.log("onValidated has been triggered!")
+                return subscribe(formData)
+              }}
+            />
+          )}
+        />
         <Subheading>Setup</Subheading>
-        <h2 style={{fontWeight: "normal"}} >
+        <h2 style={{ fontWeight: "normal" }}>
           Get started.
           <br /> In four quick steps.
         </h2>
@@ -31,18 +47,24 @@ const SectionSetup = () => {
             <SeperatorTwo />
           </Seperator>
           <Number>2</Number>
-          <StyledStepDescription>Add your income and expenses.</StyledStepDescription>
+          <StyledStepDescription>
+            Add your income and expenses.
+          </StyledStepDescription>
         </Step>
         <Step>
           <Seperator>
             <SeperatorThree />
           </Seperator>
           <Number>3</Number>
-          <StyledStepDescription>View your net balance on home screen</StyledStepDescription>
+          <StyledStepDescription>
+            View your net balance on home screen
+          </StyledStepDescription>
         </Step>
         <Step>
           <Number>4</Number>
-          <StyledStepDescription>Check your entries to see you income - expenses</StyledStepDescription>
+          <StyledStepDescription>
+            Check your entries to see you income - expenses
+          </StyledStepDescription>
         </Step>
       </Setup>
     </Container>

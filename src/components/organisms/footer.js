@@ -7,37 +7,43 @@ import { media } from "@utils/media"
 
 const Footer = () => {
   return (
-    <FooterContainer>
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
-      <Info>
-        <Contact>
-          <a href="mailto:supersimpleacc10@google.com">
-            Email: supersimpleacc10@google.com
-          </a>
-          <a href="https://www.freepik.com/search?format=search&last_filter=query&last_value=finance+mobile&query=finance+mobile&type=vector">
-            Illustration by storyset on Freepik
-          </a>
-        </Contact>
-        <Social>
-          <li>
-            <Link href="https://x.com/AccountantApp">Twitter</Link>
-          </li>
-        </Social>
-      </Info>
-      <LinkTop />
-    </FooterContainer>
+    <div>
+      <FooterContainer>
+        <LogoContainer>
+          <Logo />
+        </LogoContainer>
+        <Info>
+          <Social>
+            <li>
+              <Link href="https://x.com/AccountantApp">
+                Follow us on Twitter
+              </Link>
+            </li>
+          </Social>
+          <Contact>
+            <a href="mailto:supersimpleacc10@gmail.com">
+              Email: supersimpleacc10@gmail.com
+            </a>
+          </Contact>
+        </Info>
+        <LinkTop />
+      </FooterContainer>
+      <CenteredLink href="https://www.freepik.com/search?format=search&last_filter=query&last_value=finance+mobile&query=finance+mobile&type=vector">
+        Illustration by storyset on Freepik
+      </CenteredLink>
+      <br />
+    </div>
   )
 }
 
 export default Footer
 
 const FooterContainer = styled.footer`
-  align-items: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 1fr;
   margin: 0 var(--spacingContent);
   padding-bottom: var(--spacingFooter);
   position: relative;
@@ -51,7 +57,12 @@ const LogoContainer = styled.div`
   position: relative;
 `
 
-const Info = styled.div``
+const Info = styled.div`
+  flex-grow: 1; /* This makes the Info component take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 const Contact = styled.div`
   display: flex;
@@ -76,4 +87,10 @@ const Social = styled.ul`
   li {
     margin-bottom: 0.5rem;
   }
+`
+
+const CenteredLink = styled.a`
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 `
