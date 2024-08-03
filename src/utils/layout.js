@@ -14,7 +14,7 @@ import Footer from "@organisms/footer"
 import "./variables.css"
 
 const GlobalStyle = createGlobalStyle`
-html, body {
+html, body, button {
     font-family: 'Josefin Sans', sans-serif;
 }
 
