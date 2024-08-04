@@ -80,7 +80,7 @@ const formStyle = {
   alignItems: "center",
   padding: "50px",
   border: "1px solid #ccc",
-  borderRadius: "5px",
+  borderRadius: "12px",
   maxWidth: "500px",
   margin: "0 auto",
 }
@@ -98,14 +98,14 @@ const labelStyle = {
 const inputStyle = {
   width: "90%",
   padding: "10px",
-  borderRadius: "5px",
+  borderRadius: "12px",
   border: "1px solid #ccc",
 }
 
 const buttonStyle = {
-  fontSize: "16px",
-  padding: "10px 20px",
-  borderRadius: "5px",
+  fontSize: "18px",
+  padding: "10px 28px",
+  borderRadius: "12px",
   border: "none",
   backgroundColor: "#673AB7",
   color: "#fff",

@@ -28,10 +28,6 @@ const Footer = () => {
         </Info>
         <LinkTop />
       </FooterContainer>
-      <CenteredLink href="https://www.freepik.com/search?format=search&last_filter=query&last_value=finance+mobile&query=finance+mobile&type=vector">
-        Illustration by storyset on Freepik
-      </CenteredLink>
-      <br />
     </div>
   )
 }
