@@ -4,25 +4,29 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { media } from "@utils/media"
 import Button from "@atoms/button"
-import { googlePlayUrl } from "../../constants"
-
+import { googlePlayUrl, goToAppUrl } from "../../constants"
+import GoToAppButton from "../atoms/goToAppButton"
 
 const SectionHeader = () => {
   const data = useStaticQuery(graphql`
     query HeaderImageQuery {
-      mobileAppInUseOne: file(relativePath: { eq: "mobile_app_in_use_one.png" }) {
+      mobileAppInUseOne: file(
+        relativePath: { eq: "mobile_app_in_use_one.png" }
+      ) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mobileAppInUseTwo: file(relativePath: { eq: "mobile_app_in_use_two.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+      mobileAppInUseTwo: file(
+        relativePath: { eq: "mobile_app_in_use_two.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
         }
-      }
       }
     }
   `)
@@ -30,29 +34,33 @@ const SectionHeader = () => {
   return (
     <HeaderContainer contentTop content grid backgroundSecondary>
       <Image>
-      <MobileAppInUseImages>
-        <Img
+        <MobileAppInUseImages>
+          <Img
             fluid={data.mobileAppInUseOne.childImageSharp.fluid}
-            style={{ width: "100%", height: "auto", maxWidth: "30%"}}
+            style={{ width: "100%", height: "auto", maxWidth: "30%" }}
           />
           <Img
             fluid={data.mobileAppInUseTwo.childImageSharp.fluid}
-            style={{ width: "100%", height: "auto", maxWidth: "35%"}}
+            style={{ width: "100%", height: "auto", maxWidth: "35%" }}
           />
-      </MobileAppInUseImages>
+        </MobileAppInUseImages>
       </Image>
       <Content>
         <h1 style={{ color: "black", fontSize: 48, fontWeight: "normal" }}>
           The most simple accountant - budget planner out there!
         </h1>
-        <Button
-          style={{ color: "white"}}
-          href={googlePlayUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Download now!
-        </Button>
+
+        <ButtonContainer>
+          <Button
+            style={{ color: "white" }}
+            href={googlePlayUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download now!
+          </Button>
+          <GoToAppButton />
+        </ButtonContainer>
       </Content>
       <HeaderCurve fill="none" viewBox="0 0 1680 232">
         <path
@@ -80,6 +88,15 @@ const HeaderContainer = styled.header`
   @media ${media.lg} {
     flex-direction: row-reverse;
     min-height: 800px;
+  }
+`
+
+const ButtonContainer = styled.div`
+  display: flex;
+  gap: 1rem; /* Adjust the gap as needed */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `
 

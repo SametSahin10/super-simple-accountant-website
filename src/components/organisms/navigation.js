@@ -4,6 +4,7 @@ import Logo from "@atoms/logo"
 import styled from "styled-components"
 import Link from "@atoms/link"
 import { media } from "@utils/media"
+import GoToAppButton from "../atoms/goToAppButton"
 
 const Navigation = () => (
   <Nav>
