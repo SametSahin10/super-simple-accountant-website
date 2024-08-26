@@ -22,7 +22,6 @@ const SectionSetup = () => {
               status={status}
               message={message}
               onValidated={formData => {
-                console.log("onValidated has been triggered!")
                 return subscribe(formData)
               }}
             />

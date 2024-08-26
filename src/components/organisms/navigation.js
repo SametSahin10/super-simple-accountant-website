@@ -26,10 +26,10 @@ const Nav = styled.nav`
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
   position: absolute;
-  top: 0;
-  width: 100vw;
+  width: 90%;
   z-index: 1000;
   flex-wrap: wrap;
 `

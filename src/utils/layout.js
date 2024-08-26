@@ -16,6 +16,7 @@ import "./variables.css"
 const GlobalStyle = createGlobalStyle`
 html, body, button {
     font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
 }
 
 @media (min-width: 320px) {

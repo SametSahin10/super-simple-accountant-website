@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 
 const PrettyEmailSignUpForm = ({ status, message, onValidated }) => {
   const [email, setEmail] = useState("")
-  const [name, setName] = useState("")
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(null)
 
@@ -10,7 +9,6 @@ const PrettyEmailSignUpForm = ({ status, message, onValidated }) => {
     if (status === "success") {
       setSuccess("Subscription successful! Thank you for signing up.")
       setEmail("")
-      setName("")
     } else if (status === "error") {
       setError(message)
     }
@@ -21,14 +19,13 @@ const PrettyEmailSignUpForm = ({ status, message, onValidated }) => {
     setError(null)
     setSuccess(null)
 
-    if (!email || !name) {
-      setError("Both fields are required.")
+    if (!email) {
+      setError("Email is required.")
       return
     }
 
     const formData = {
       EMAIL: email,
-      NAME: name,
     }
 
     onValidated(formData)
@@ -51,18 +48,6 @@ const PrettyEmailSignUpForm = ({ status, message, onValidated }) => {
           />
           <br />
           <br />
-          <div style={inputGroupStyle}>
-            <label htmlFor="name" style={labelStyle}>
-              Name (optional)
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              style={inputStyle}
-            />
-          </div>
         </div>
         {error && <p style={errorStyle}>{error}</p>}
         {success && <p style={successStyle}>{success}</p>}
@@ -86,25 +71,26 @@ const formStyle = {
 }
 
 const inputGroupStyle = {
-  marginBottom: "15px",
+  marginBottom: "4px",
   width: "100%",
 }
 
 const labelStyle = {
   display: "block",
-  marginBottom: "5px",
+  marginBottom: "10px",
 }
 
 const inputStyle = {
   width: "90%",
-  padding: "10px",
+  padding: "14px",
   borderRadius: "12px",
   border: "1px solid #ccc",
 }
 
 const buttonStyle = {
   fontSize: "18px",
-  padding: "10px 28px",
+  padding: "12px 36px",
+  paddingTop: "14px",
   borderRadius: "12px",
   border: "none",
   backgroundColor: "#673AB7",

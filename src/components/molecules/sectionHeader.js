@@ -145,7 +145,7 @@ const HeaderCurve = styled.svg`
   top: 100vh;
   left: 0;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: auto;
 
   @media (max-width: 768px) {
